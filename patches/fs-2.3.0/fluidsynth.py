@@ -1008,7 +1008,7 @@ class Synth:
             arr[idx] = 0.0
         for idx, p in enumerate(pitch_arr):
             arr[idx] = p
-        fluid_synth_activate_tuning(self.synth, bank, prog, name.encode(), arr, apply)
+        fluid_synth_activate_key_tuning(self.synth, bank, prog, name.encode(), arr, apply)
 
     def activate_octave_tuning(self, bank, prog, name, pitch_arr, apply):
         arr = (c_double * 12)(*range(12))
